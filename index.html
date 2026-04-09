@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensagem Final</title>
 
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 20px;
+        border: 3px solid white;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 28px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .highlight {
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFD700;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        background-color: #FFD700;
+        color: black;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FOTO -->
+    <img src="SUA_FOTO_AQUI.jpg" alt="Príncipe Lucas">
+
+    <h1>Príncipe Lucas</h1>
+
+    <p><strong>Parabéns…</strong></p>
+
+    <p>Você conseguiu chegar até aqui.</p>
+
+    <p>
+        Mesmo conhecendo a minha história…<br>
+        mesmo sabendo do meu passado…<br>
+        você decidiu continuar.
+    </p>
+
+    <p>
+        Você não desistiu…<br>
+        e isso significa tudo pra mim.
+    </p>
+
+    <p>
+        Porque quando é de Deus…<br>
+        não precisa ser perfeito…<br>
+        só precisa ser verdadeiro.
+    </p>
+
+    <p>
+        “O amor tudo sofre, tudo crê, tudo espera, tudo suporta.”<br>
+        — 1 Coríntios 13:7
+    </p>
+
+    <p>
+        “Todas as coisas cooperam para o bem daqueles que amam a Deus…”<br>
+        — Romanos 8:28
+    </p>
+
+    <p>
+        Obrigado por acreditar.<br>
+        Obrigado por permanecer.
+    </p>
+
+    <p class="highlight">
+        Agora… eu quero te encontrar.
+    </p>
+
+    <p class="highlight">
+        Hoje às 19:30<br>
+        no banco da praça<br>
+        próximo ao mercadinho ❤️
+    </p>
+
+    <!-- BOTÃO DE MÚSICA -->
+    <button onclick="toggleMusic()">🎵 Tocar Música</button>
+
+    <!-- ÁUDIO -->
+    <audio id="musica" loop>
+        <source src="SUA_MUSICA_AQUI.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+</div>
+
+<script>
+    var musica = document.getElementById("musica");
+    var tocando = false;
+
+    function toggleMusic() {
+        if (tocando) {
+            musica.pause();
+            tocando = false;
+            event.target.innerText = "🎵 Tocar Música";
+        } else {
+            musica.play();
+            tocando = true;
+            event.target.innerText = "⏸️ Pausar Música";
+        }
+    }
+</script>
+
+</body>
+</html>
